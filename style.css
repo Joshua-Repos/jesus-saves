@@ -1,0 +1,73 @@
+*{
+    margin: 0;  
+    padding: 0;
+        font-family: 'Playfair Display';font-size: 30px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+ @keyframes indicate {
+    from {
+      transform: scaleX(0);
+    }
+  }
+
+body {
+    background-color: crimson;
+  font-family: Garamond, serif;
+}
+
+.ns, .cs, .cs2, .rv, .ois{
+    text-align: center;
+    background-color: #FFB16C;
+    padding: 1rem;
+    margin: 1rem;
+    font-style: italic;
+animation:
+      fadeIn linear,
+      fadeOut linear;
+    animation-timeline: view(), view();
+    animation-range: entry, exit;
+}
+
+.card{
+    text-align: center;
+    background-color: #FFB16C;
+    padding: 1rem;
+    margin: 1rem;
+    font-style: italic;
+}
+
+  .readingIndicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: #D05897;
+    transform-origin: left center;
+    animation: indicate linear;
+    animation-timeline: scroll();
+  }
+
+  /* Great thanks to Josh Cameau for the animiations! */
